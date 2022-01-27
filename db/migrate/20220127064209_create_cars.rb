@@ -5,6 +5,7 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.datetime :year
       t.string :description
       t.string :image
+      t.price :price
       t.references :industry, foreign_key: { to_table: :industries }
       t.timestamps
     end
