@@ -29,9 +29,12 @@ ActiveRecord::Schema.define(version: 2022_01_27_091442) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
-    t.datetime "year", precision: 6
-    t.string "description"
+    t.string "model"
+    t.string "engine"
     t.string "image"
+    t.integer "price"
+    t.integer "seats"
+    t.datetime "year", precision: 6
     t.bigint "industry_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
