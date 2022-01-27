@@ -1,4 +1,9 @@
 class V1::CarsController < ApplicationController
+  def show
+    @car = Car.find(params[:id])
+    render json: @car, status: :ok
+  end
+
   def create
     @car = Car.new(car_params)
     if @car.save
