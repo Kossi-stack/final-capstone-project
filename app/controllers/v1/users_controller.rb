@@ -1,6 +1,15 @@
-class V1::UsersController < ApplicationController
+class V1::UsersController < V1::BaseController
+
+  before_action :find_user, only: %w[show]
+
   def show
-    @user = User.find(params[:id])
-    render json: @user, status: :ok
+    render_jsonapi_response(@user)
   end
+
+  private
+
+  def find_user
+    @user = User.find(params[:id])
+  end
+
 end

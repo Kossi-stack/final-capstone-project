@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(name: "Tom", email: "tom@gmail.com", password: "123456")
+User.create(name: "Tom", email: "tom@gmail.com", password: "123456", password_confirmation: "123456")
 
 Industry.create(name: "Ford", description: "Ford is a multinational American automobile manufacturer headquartered in Dearborn, Michigan, a suburb of Detroit, Michigan, in the United States.", image: "https://res.cloudinary.com/dhatgaadw/image/upload/v1643284367/Cars/logos/image-2_ypinio.png")
 
