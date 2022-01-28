@@ -1,4 +1,6 @@
 class V1::CarsController < ApplicationController
+  before_action :authenticate_user!, only: %i[create destroy]
+
   def show
     @car = Car.find(params[:id])
     render json: @car, status: :ok

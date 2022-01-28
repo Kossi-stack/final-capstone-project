@@ -1,5 +1,21 @@
 class ApplicationController < ActionController::API
-    rescue_from ActiveRecord::RecordNotUnique, with: :record_not_unique
+
+  # before action authentication
+  def authenticate_user!
+    if request.headers['Authorization'].present?
+      token = request.headers['Authorization'].split(' ').last
+      begin
+        @decoded = JsonWebToken.decode(token)
+        @current_user = User.find(@decoded[:user_id])
+      rescue ActiveRecord::RecordNotFound => e
+        render json: { errors: e.message }, status: :unauthorized
+      end
+    else
+      render json: { errors: 'Not authenticated' }, status: :unauthorized
+    end
+  end
+
+  rescue_from ActiveRecord::RecordNotUnique, with: :record_not_unique
 
   def render_jsonapi_response(resource)
     if resource.errors.empty?

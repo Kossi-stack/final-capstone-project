@@ -1,4 +1,6 @@
 class V1::AppointmentsController < ApplicationController
+  before_action :authenticate_user!, only: %i[create destroy]
+
   def index
     @appointments = Appointment.all
     render json: @appointments, status: :ok

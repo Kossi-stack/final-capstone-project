@@ -1,4 +1,6 @@
 class V1::IndustriesController < ApplicationController
+  before_action :authenticate_user!, only: %i[create destroy]
+
   def show
     @cars = Car.where(industry_id: params[:id])
     render json: @cars, status: :ok
