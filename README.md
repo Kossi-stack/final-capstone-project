@@ -22,3 +22,27 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+👤👤 Authors
+
+👤 ## ***Kossi Fioklou***
+- Location: Togo
+- GitHub: [@Kossi-stack](https://github.com/kossi-stack)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kossi-stack/)
+👤 
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page.
+
+Show your support
+Give a ⭐️ if you like this project!
+
+Acknowledgments
+This project was inspired by Microverse
+
+📝 License
+This project is MIT license
