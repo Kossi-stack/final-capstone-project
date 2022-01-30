@@ -6,10 +6,7 @@ describe V1::UsersController, type: :request do
 
   context 'When fetching a user' do
     before do
-      login_with_api(user)
-      get "/v1/users/#{user.id}", headers: {
-        'Authorization': response.headers['Authorization']
-      }
+      
     end
 
     it 'returns 200' do

@@ -31,6 +31,7 @@ Things you may want to cover:
 - Location: Togo
 - GitHub: [@Kossi-stack](https://github.com/kossi-stack)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kossi-stack/)
+
 👤 
 
 🤝 Contributing
