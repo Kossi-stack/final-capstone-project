@@ -21,7 +21,7 @@ class ApplicationController < ActionController::API
     if resource.errors.empty?
       render jsonapi: resource
     else
-      render jsonapi_errors: resource.errors, status: 400
+     
     end
   end
 

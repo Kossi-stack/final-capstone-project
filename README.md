@@ -27,12 +27,21 @@ Things you may want to cover:
 
 👤👤 Authors
 
-👤 ## ***Kossi Fioklou***
+👤 ***Kossi Fioklou***
 - Location: Togo
 - GitHub: [@Kossi-stack](https://github.com/kossi-stack)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kossi-stack/)
 
-👤 
+👤***Elmar***
+- Location: 
+- GitHub: []()
+- LinkedIn: []()
+
+👤***Rustam***
+- Location: 
+- GitHub: []()
+- LinkedIn: []()
+
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
