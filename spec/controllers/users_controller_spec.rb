@@ -36,7 +36,13 @@ describe V1::UsersController, type: :request do
   end
 
   context 'When the Authorization header is missing' do
-    
+    before do
+      get "/v1/users/#{user.id}"
+    end
+
+    it 'returns 401' do
+      expect(response.status).to eq(401)
+    end
   end
 
 end
