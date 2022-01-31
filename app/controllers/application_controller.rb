@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::API
-
   # before action authentication
   def authenticate_user!
     if request.headers['Authorization'].present?
-      token = request.headers['Authorization'].split(' ').last
+      token = request.headers['Authorization'].split.last
       begin
         @decoded = JsonWebToken.decode(token)
         @current_user = User.find(@decoded[:user_id])
@@ -27,10 +26,10 @@ class ApplicationController < ActionController::API
 
   def record_not_unique(message)
     render json: {
-      'errors': [
+      errors: [
         {
-          'status': '400',
-          'title': message
+          status: '400',
+          title: message
         }
       ]
     }, status: 400

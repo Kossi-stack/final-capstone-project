@@ -1,5 +1,4 @@
 class V1::UsersController < V1::BaseController
-
   before_action :find_user, only: %w[show]
 
   def show
@@ -11,5 +10,4 @@ class V1::UsersController < V1::BaseController
   def find_user
     @user = User.find(params[:id])
   end
-
 end

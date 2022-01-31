@@ -1,5 +1,4 @@
 module ApiHelpers
-
   def json
     JSON.parse(response.body)
   end
@@ -16,5 +15,4 @@ module ApiHelpers
   def set_devise_mapping
     request.env['devise.mapping'] = Devise.mappings[:user]
   end
-
 end

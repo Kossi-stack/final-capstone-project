@@ -1,14 +1,13 @@
 require 'rails_helper'
 
 describe V1::UsersController, type: :request do
-
-  let (:user) { create_user }
+  let(:user) { create_user }
 
   context 'When fetching a user' do
     before do
       login_with_api(user)
       get "/v1/users/#{user.id}", headers: {
-        'Authorization': response.headers['Authorization']
+        Authorization: response.headers['Authorization']
       }
     end
 
@@ -25,8 +24,8 @@ describe V1::UsersController, type: :request do
   context 'When a user is missing' do
     before do
       login_with_api(user)
-      get "/v1/users/blank", headers: {
-        'Authorization': response.headers['Authorization']
+      get '/v1/users/blank', headers: {
+        Authorization: response.headers['Authorization']
       }
     end
 
@@ -44,5 +43,4 @@ describe V1::UsersController, type: :request do
       expect(response.status).to eq(401)
     end
   end
-
 end

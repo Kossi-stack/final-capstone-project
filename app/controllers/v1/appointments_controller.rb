@@ -25,7 +25,7 @@ class V1::AppointmentsController < ApplicationController
   end
 
   private
-  
+
   def appointment_params
     params.require(:appointment).permit(:date, :time, :user_id, :car_id)
   end

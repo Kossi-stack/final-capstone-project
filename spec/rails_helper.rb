@@ -1,17 +1,16 @@
-
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'jsonapi/rspec'
 require 'vcr'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # run as spec files by default. This means that files in spec/support that end
 # in _spec.rb will both be required and run as specs, causing the specs to be
 # run twice. It is recommended that you do not name files matching this glob to
@@ -49,7 +48,7 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-RSpec::Matchers.define :be_url do |expected|
+RSpec::Matchers.define :be_url do |_expected|
   match do |actual|
     actual =~ URI::DEFAULT_PARSER.make_regexp
   end
@@ -57,7 +56,7 @@ end
 
 RSpec.configure do |config|
   config.tty = true
-  config.formatter = :documentation 
+  config.formatter = :documentation
 
   config.include JSONAPI::RSpec
   # Support for documents with mixed string/symbol keys. Disabled by default.

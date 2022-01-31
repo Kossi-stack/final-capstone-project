@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 describe SessionsController, type: :request do
-
-  let (:user) { create_user }
-  let (:login_url) { '/v1/login' }
-  let (:logout_url) { '/v1/logout' }
+  let(:user) { create_user }
+  let(:login_url) { '/v1/login' }
+  let(:logout_url) { '/v1/logout' }
 
   context 'When logging in' do
     before do
@@ -33,7 +32,6 @@ describe SessionsController, type: :request do
     it 'returns 401' do
       expect(response.status).to eq(401)
     end
-
   end
 
   context 'When logging out' do
@@ -43,5 +41,4 @@ describe SessionsController, type: :request do
       expect(response).to have_http_status(204)
     end
   end
-
 end
